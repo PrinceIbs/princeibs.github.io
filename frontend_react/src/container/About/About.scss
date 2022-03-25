@@ -1,0 +1,48 @@
+.app__about {
+  width: 100;
+  flex: 1;
+  flex-direction: row;
+
+  p {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  svg {
+    font-size: 70px;
+    margin-top: 10px;
+  }
+}
+
+.app__profiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 1.7rem;
+}
+
+.app__profiles-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 175px;
+  margin: 2.5rem;
+
+  img {
+    height: 185px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  @media screen and (min-width: 2000px) {
+    width: 300px;
+    margin: 2.3rem 4.5rem;
+
+    img {
+      height: 350px;
+    }
+  }
+}
