@@ -1,0 +1,150 @@
+.app__navbar {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blut(5px);
+  --webkit-backdrop-filter: blur(5px);
+  border: solid 1px rgba(255, 255, 255, 0.1);
+  position: fixed;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app__navbar-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  img {
+    border-radius: 10px;
+    width: 110px;
+    height: 60px;
+    object-fit: cover;
+
+    @media screen and (min-width: 2000px) {
+      width: 192px;
+      height: 44px;
+    }
+  }
+}
+
+.app__navbar-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  list-style-type: none;
+
+  li {
+    flex-direction: column;
+    margin: 0 1.3rem;
+    cursor: pointer;
+
+    a {
+      color: var(--grey-color);
+      font-weight: 600;
+      font-size: 1rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      flex-direction: column;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: var(--secondary-color);
+      }
+    }
+
+    &:hover {
+      color: var(--secondary-color);
+    }
+  }
+
+  @media screen and (max-width: 690px) {
+    display: none;
+  }
+}
+
+.app__navbar-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-color);
+  border-radius: 50px;
+  position: relative;
+  height: 35px;
+  width: 35px;
+  position: relative;
+
+  svg {
+    height: 68%;
+    width: 68%;
+    color: var(--white-color);
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    height: 100vh;
+    width: 70%;
+    padding: 1.1rem;
+
+    background: rgba(255, 255, 255, 0.4);
+    background-color: var(--white-color);
+    background-size: cover;
+    background-repeat: repeat;
+    box-shadow: 0 0 0 7px rgba(187, 184, 184, 0.15);
+
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    svg {
+      width: 40px;
+      height: 40px;
+      color: var(--secondary-color);
+      margin: 0.5rem 1rem;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      height: 100%;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+
+      li {
+        margin: 0.9rem;
+
+        a {
+          color: var(--grey-color);
+          font-size: 1rem;
+          font-weight: 600;
+          text-decoration: none;
+          text-transform: uppercase;
+
+          transition: all 0.2s ease-in-out;
+
+          &:hover {
+            color: var(--secondary-color);
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 690px) {
+    display: none;
+  }
+}
