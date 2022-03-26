@@ -1,5 +1,5 @@
 import React from "react";
-import { HiMenu, HiMenuAlt1, HiMenuAlt4, HiX } from "react-icons/hi";
+import { HiMenu, HiX } from "react-icons/hi";
 
 import { images } from "../../constants";
 import "./Navbar.scss";
@@ -12,7 +12,7 @@ const Navbar = () => {
         <img src={images.logo} alt="logo" />
       </div>
       <ul className="app__navbar-links">
-        {["home", "about", "skills", "work", "contact"].map((link) => (
+        {["home", "about", "skills", "projects", "contact"].map((link) => (
           <li className="app__flex p-text">
             <a href={`#${link}`}>{link}</a>
           </li>
@@ -25,7 +25,7 @@ const Navbar = () => {
           <div>
             <HiX onClick={() => setIsNavOpen(false)} />
             <ul>
-              {["home", "about", "skills", "work", "contact"].map((link) => (
+              {["home", "about", "skills", "projects", "contact"].map((link) => (
                 <li key={link}>
                   <a href={`#${link}`}>{link}</a>
                 </li>

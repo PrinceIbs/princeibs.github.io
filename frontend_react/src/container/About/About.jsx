@@ -30,7 +30,7 @@ const abouts = [
 const About = () => {
   return (
     <div className="app__about">
-      <h2 className="head-text"><p>My <span>ToolBox</span></p><GrTools/></h2>
+      <h2 className="head-text"><p>A Little <span>About Me</span></p><GrTools/></h2>
 
       <div className="app__profiles">
         {abouts.map((about) => (
