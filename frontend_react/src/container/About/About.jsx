@@ -31,24 +31,40 @@ const About = () => {
   return (
     <div id="about">
       <div className="app__about">
-        <h2 className="head-text">
-          <p>
-             About Me
-          </p>
+        <h2 className="head-text color-text">
+          <p >About Me</p>
         </h2>
 
-        <div className="app__profiles">
-          {abouts.map((about) => (
-            <div className="app__profiles-item" key={about.title}>
-              <img src={about.image} alt={about.title} />
-              <h2 className="bold-text" style={{ marginTop: 20 }}>
-                {about.title}
-              </h2>
-              <h2 className="p-text" style={{ marginTop: 10 }}>
-                {about.description}
-              </h2>
+        <div className="app__about-body">
+          <div className="app__about-img">
+            <img src={images.html} />
+          </div>
+
+          <div className="app__about-content">
+            <div className="app__about-txt">
+              <p className="bold-text">
+                I wish to say good things right now at this section, but since
+                this is still a development environment, let's use this to hold
+                the containers first.
+                <br/> <br/>                
+                I wish to say good things right now at this section, but since
+                this is still a development environment, let's use this to hold
+                the containers first.
+              </p>
             </div>
-          ))}
+            <div>
+              <h3 className="bold-text">I am a ...</h3>
+            </div>
+            <div className="app__profiles">
+              <div className="app__profiles-txt"></div>
+              {abouts.map((about) => (
+                <div className="app__profiles-item" key={about.title}>
+                  <img src={about.image} alt={about.title} />
+                  <h2 className="bold-text">{about.title}</h2>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>

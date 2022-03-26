@@ -60,9 +60,8 @@
     border-radius: 0.5rem;
     color: var(--black-color);
     background-color: var(--white-color);
-    transition: all 0.4s ease;    
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    
+    transition: all 0.4s ease;
+    box-shadow: var(--medium-shadow);
 
     @media screen and (min-width: 2000px) {
       width: 470px;

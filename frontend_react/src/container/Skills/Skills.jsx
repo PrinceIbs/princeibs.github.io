@@ -8,6 +8,10 @@ const skills = [
   { name: "JavaScript", imgUrl: images.javascript, bgColor: "#FFF" },
   { name: "Java", imgUrl: images.react, bgColor: "#FFF" },
   { name: "Git", imgUrl: images.git, bgColor: "#FFF" },
+  { name: "Python", imgUrl: images.python, bgColor: "#FFF" },
+  { name: "JavaScript", imgUrl: images.javascript, bgColor: "#FFF" },
+  { name: "Java", imgUrl: images.react, bgColor: "#FFF" },
+  { name: "Git", imgUrl: images.git, bgColor: "#FFF" },
 ];
 
 const experiences = [
@@ -30,7 +34,7 @@ const Skills = () => {
   return (
     <div id="skills">      
       <div className="app__skills">
-        <h2 className="head-text">My Skills & Experiences</h2>
+        <h2 className="head-text color-text">My Skills & Experiences</h2>
         <div className="app__skills-container">
           <div className="app__skills-list">
             {skills.map((skill, index) => (

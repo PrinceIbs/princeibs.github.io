@@ -1,3 +1,15 @@
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .app__navbar {
   width: 100%;
   padding: 1rem 2rem;
@@ -16,16 +28,17 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  background-color: var(--dark-color);
+  padding: 7px 12px;
 
-  img {
-    border-radius: 10px;
-    width: 110px;
-    height: 60px;
-    object-fit: cover;
+  p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: consolas;
+    color: var(--green-color);
 
-    @media screen and (min-width: 2000px) {
-      width: 192px;
-      height: 44px;
+    span {
+      animation: blink 1s infinite;
     }
   }
 }
@@ -104,7 +117,7 @@
     background-color: var(--white-color);
     background-size: cover;
     background-repeat: repeat;
-    box-shadow: 0 0 0 7px rgba(187, 184, 184, 0.15);
+    box-shadow: var(--light-shadow);
 
     z-index: 5;
     position: fixed;

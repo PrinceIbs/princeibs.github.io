@@ -47,7 +47,7 @@ const Projects = () => {
   return (
     <div id="projects">
       <div className="app__projects">
-        <h2 className="head-text"> My Projects</h2>
+        <h2 className="head-text color-text"> My Projects</h2>
 
         <div className="app__projects-filter">
           {["Django", "React", "All"].map((item, index) => (

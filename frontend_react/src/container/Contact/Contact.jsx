@@ -33,7 +33,7 @@ const Contact = () => {
   return (
     <div id="contact">
          <div className="app__contact">
-      <h2 className="head-text">Connect with me</h2>
+      <h2 className="head-text color-text">Connect with me</h2>
 
       <div className="app__contact-cards">
         <div className="app__contact-card">

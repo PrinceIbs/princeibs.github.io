@@ -11,9 +11,10 @@
   --gray-color: #8e8c91;
   --lightGray-color: #e4e4e4;
   --white-color: #ffffff;
-  --code-color: #034103;
+  --green-color: #0f9d58;
   --light-shadow: 0 0 10px rgb(170, 161, 161);
-  --medium-shadow: 0 0 20px rgb(170, 161, 161);
+  --medium-shadow: 0 0 15px rgb(170, 161, 161);
+  --thick-shadow: 0 0 20px rgb(170, 161, 161);
 }
 
 * {
