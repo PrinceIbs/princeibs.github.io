@@ -52,18 +52,19 @@
       transition: all 0.3s ease-in-out;
 
       &:hover {
+        transition: all 0.3s ease-in-out;
         color: var(--secondary-color);
         &::before {
-          content: "< "
+          content: "< ";
         }
         &::after {
-          content: " />"
+          content: " />";
         }
       }
     }
 
     &:hover {
-      color: var(--secondary-color);      
+      color: var(--secondary-color);
     }
   }
 

@@ -1,7 +1,7 @@
 import React from "react";
 
 import { images } from "../../constants";
-import {GrTools, Hi} from 'react-icons/gr';
+import { GrTools, Hi } from "react-icons/gr";
 import "./About.scss";
 
 const abouts = [
@@ -29,21 +29,28 @@ const abouts = [
 
 const About = () => {
   return (
-    <div className="app__about">
-      <h2 className="head-text"><p>A Little <span>About Me</span></p><GrTools/></h2>
+    <div id="about">
+      <div className="app__about">
+        <h2 className="head-text">
+          <p>
+            A Little <span>About Me</span>
+          </p>
+          <GrTools />
+        </h2>
 
-      <div className="app__profiles">
-        {abouts.map((about) => (
-          <div className="app__profiles-item" key={about.title}>
-            <img src={about.image} alt={about.title} />
-            <h2 className="bold-text" style={{ marginTop: 20 }}>
-              {about.title}
-            </h2>
-            <h2 className="p-text" style={{ marginTop: 10 }}>
-              {about.description}
-            </h2>
-          </div>
-        ))}
+        <div className="app__profiles">
+          {abouts.map((about) => (
+            <div className="app__profiles-item" key={about.title}>
+              <img src={about.image} alt={about.title} />
+              <h2 className="bold-text" style={{ marginTop: 20 }}>
+                {about.title}
+              </h2>
+              <h2 className="p-text" style={{ marginTop: 10 }}>
+                {about.description}
+              </h2>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
