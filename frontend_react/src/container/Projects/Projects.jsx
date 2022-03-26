@@ -20,6 +20,21 @@ const filteredProjects = [
     description: "A clone of YouTube app",
     imgUrl: images.html,
   },
+  {
+    title: "Twitter Clone",
+    description: "A clone of discord app",
+    imgUrl: images.css,
+  },
+  {
+    title: "Discord Clone Clone",
+    description: "A clone of Twitter app",
+    imgUrl: images.javascript,
+  },
+  {
+    title: "YouTube Clone Clone",
+    description: "A clone of YouTube app",
+    imgUrl: images.html,
+  },
 ];
 
 const Projects = () => {
@@ -32,7 +47,7 @@ const Projects = () => {
   return (
     <div id="projects">
       <div className="app__projects">
-        <h2 className="head-text">Projects</h2>
+        <h2 className="head-text"> My Projects</h2>
 
         <div className="app__projects-filter">
           {["Django", "React", "All"].map((item, index) => (

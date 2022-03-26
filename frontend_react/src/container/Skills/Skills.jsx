@@ -33,8 +33,8 @@ const Skills = () => {
         <h2 className="head-text">My Skills & Experiences</h2>
         <div className="app__skills-container">
           <div className="app__skills-list">
-            {skills.map((skill) => (
-              <div className="app__skills-item app__flex">
+            {skills.map((skill, index) => (
+              <div className="app__skills-item app__flex" key={index}>
                 <div
                   className="app__flex"
                   style={{ backgroundColor: skill.bgColor }}
@@ -47,8 +47,8 @@ const Skills = () => {
           </div>
 
           <div className="app__skills-exp">
-            {experiences.map((experience) => (
-              <div className="app__skills-exp-item">
+            {experiences.map((experience, index) => (
+              <div className="app__skills-exp-item" key={`experience-${index}`}>
                 <div className="app__skills-exp-year">
                   <p className="bold-text">{experience.year}</p>
                 </div>

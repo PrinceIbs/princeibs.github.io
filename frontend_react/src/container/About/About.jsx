@@ -33,9 +33,8 @@ const About = () => {
       <div className="app__about">
         <h2 className="head-text">
           <p>
-            A Little <span>About Me</span>
+             About Me
           </p>
-          <GrTools />
         </h2>
 
         <div className="app__profiles">

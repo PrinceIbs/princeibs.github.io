@@ -32,17 +32,17 @@ const Contact = () => {
 
   return (
     <div id="contact">
-         <div className="app__footer">
-      <h2 className="head-text">Connect with me from here</h2>
+         <div className="app__contact">
+      <h2 className="head-text">Connect with me</h2>
 
-      <div className="app__footer-cards">
-        <div className="app__footer-card">
+      <div className="app__contact-cards">
+        <div className="app__contact-card">
           <img src={images.email} alt="email" />
           <a href="mailto:hello@princeibs.com" className="p-text">
             hello@princeibs.com
           </a>
         </div>
-        <div className="app__footer-icons">
+        <div className="app__contact-icons">
           <a href="https://twitter.com/prince_ibs"><img src={images.twitter} alt="https://twitter.com/prince_ibs" /></a>
           <a href="https://linkedin.com/in/princeibs"><img src={images.linkedin} alt="https://linkedin.com/in/princeibs" /></a>          
           <a href="https://github.com/princeibs"><img src={images.github} alt="https://github.com/princeibs" /></a>          
@@ -50,7 +50,7 @@ const Contact = () => {
       </div>
 
       {!isFormSubmitted ? (
-        <div className="app__footer-form app__flex">
+        <div className="app__contact-form app__flex">
           <div className="app__flex">
             <input
               className="p-text"

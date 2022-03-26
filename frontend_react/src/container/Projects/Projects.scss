@@ -2,6 +2,8 @@
   flex: 1;
   flex-direction: column;
   width: 100%;
+  height: auto;
+  background-color: var(--white-color);
 
   h2 {
     padding-top: 6rem;
@@ -24,6 +26,7 @@
     margin: 0.5rem;
     font-weight: 800;
     border-radius: 0.5rem;
+    box-shadow: var(--light-shadow);
     transition: all 0.5s ease;
 
     &:hover {
@@ -57,11 +60,9 @@
     border-radius: 0.5rem;
     color: var(--black-color);
     background-color: var(--white-color);
-    transition: all 0.4s ease;
-
-    &:hover {
+    transition: all 0.4s ease;    
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    }
+    
 
     @media screen and (min-width: 2000px) {
       width: 470px;

@@ -1,15 +1,13 @@
-.app__footer {
+.app__contact {
   flex: 1;
   display: flex;
   width: 100%;
+  height: auto;
   flex-direction: column;
   justify-content: center;
 
-  h2 {
-    margin-top: 6rem;
-  }
 
-  .app__footer-cards {
+  .app__contact-cards {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -20,7 +18,7 @@
     
   }
 
-  .app__footer-card {
+  .app__contact-card {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -59,13 +57,13 @@
     }
   }
 
-  .app__footer-icons {
+  .app__contact-icons {
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    width: 300px;
+    width: 250px;
     border-radius: 10px;
 
     a {
@@ -75,8 +73,8 @@
       border-radius: 50%;
       transition: all .3s ease-in-out;
       img {
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
         border-radius: 10%;
         object-fit: cover;
       }
@@ -104,7 +102,7 @@
   }
 }
 
-.app__footer-form {
+.app__contact-form {
   width: 100%;
   flex-direction: column;
   margin: 0 0 2rem 0;
