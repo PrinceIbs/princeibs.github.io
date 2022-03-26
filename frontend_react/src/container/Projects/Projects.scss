@@ -2,6 +2,10 @@
   flex: 1;
   flex-direction: column;
   width: 100%;
+
+  h2 {
+    padding-top: 6rem;
+  }
 }
 
 .app__projects-filter {

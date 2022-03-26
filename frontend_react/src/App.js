@@ -2,6 +2,7 @@ import React from "react";
 
 import {
   About,
+  Contact,
   Footer,
   Header,
   Navbar,
@@ -19,6 +20,7 @@ const App = () => {
       <About />
       <Skills />
       <Projects />
+      <Contact />
       <Footer />
     </div>
   );

@@ -28,9 +28,9 @@ const experiences = [
 ];
 const Skills = () => {
   return (
-    <div id="skills">
-      <h2 className="head-text">Skills & Experiences</h2>
+    <div id="skills">      
       <div className="app__skills">
+        <h2 className="head-text">My Skills & Experiences</h2>
         <div className="app__skills-container">
           <div className="app__skills-list">
             {skills.map((skill) => (
