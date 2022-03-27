@@ -1,3 +1,4 @@
+import cover from "../assets/cover.jpg"
 import email from "../assets/email.png"
 import css from "../assets/css.png";
 import flutter from "../assets/flutter.png";
@@ -15,6 +16,7 @@ import twitter from "../assets/twitter.png";
 
 
 export default {
+  cover,
   email,
   css,
   flutter,

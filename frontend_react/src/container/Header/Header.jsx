@@ -6,37 +6,36 @@ import "./Header.scss";
 const Header = (props) => {
   return (
     <div id="home">
-      <div className={`app__header app__flex ${props.themeMode}`}>
+      <div className={`app__header ${props.themeMode}`}>
         <div className="app__header-info">
-          <div className="app__header-badge">
-            <div className="badge-card app__flex">
-              <span>👋</span>
-              <div style={{ marginLeft: "17px" }}>
-                <p className="p_text">Meet</p>
-                <h1 className="head-text">Ibrahim</h1>
-              </div>
-            </div>
-
-            <div className="tag-card app__flex">
-              <p className="p-text">Software Engineer</p>
+          <div className="app__header-info-content">
+            <h1>
+              meet <br />
+              <span>Suleiman Ibrahim</span>
+            </h1>
+            <h2>a software engineer</h2>
+            <p>
+              this is a simple dummy text that will be replaced later with
+              something meaningful. It's purpose and life is to occupy this
+              container and space while the original text arrives
+            </p>
+            <div className="app__header-info-buttons">
+              <a href="#contact" style={{ textDecoration: "none" }}>
+                <div className="contact-btn app__flex">contact me</div>
+              </a>
+              <div className="download-btn app__flex">download resume</div>
             </div>
           </div>
+          <div className="app__header-info-misc">
+            <div className="app__flex">h</div>
+            <div className="app__flex">a</div>
+            <div className="app__flex">c</div>
+            <div className="app__flex">k</div>
+          </div>
         </div>
-
-        <div className="app__header-img">
-          <img src={images.sass} alt="profile-img" />
-          {/* <img /> */}
-        </div>
-
-        <div className="app__header-skills">
-          {[images.react, images.javascript, images.python].map(
-            (image, index) => (
-              <div className="skill-circle app__flex" key={index}>
-                <img src={image} alt="skill-image" />
-              </div>
-            )
-          )}
-        </div>
+        {/* <div className="bg-img">
+          <img src={images.cover} />
+        </div> */}
       </div>
     </div>
   );
