@@ -4,6 +4,7 @@
   width: 100%;
   height: auto;
   background-color: var(--white-color);
+  transition: all .2s ease-in-out;
 
   h2 {
     padding-top: 6rem;
@@ -143,4 +144,42 @@
       margin-top: 3rem;
     }
   }
+}
+
+
+.dark-mode-1 {
+  background-color: var(--darkbg-color-1);
+
+  h2 {
+    color: var(--lightGray-color);  
+  }
+
+  .app__projects-filter-item {
+    background-color: var(--darkbg-color-2);
+    border: solid 1px var(--light-border-color);
+    color: var(--lightGray-color);
+    box-shadow: 0 0 0;        
+  }
+
+  .app__projects-filter-item:hover, .item-active {
+    background-color: var(--lightGray-color);
+    color: var(--black-color);
+  }
+
+  .app__projects-item {
+    background-color: var(--darkbg-color-2);
+    box-shadow: 0 0 0;
+    border: solid 1px var(--light-border-color);
+
+    .app__projects-content {
+      h4, p {
+        color:var(--lightGray-color)
+      }
+    }
+
+    .app__projects-hover:hover {
+      background-color: rgba(186, 181, 181, 0.2);
+    }
+  }
+
 }

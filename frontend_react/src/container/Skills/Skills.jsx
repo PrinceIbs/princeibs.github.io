@@ -30,19 +30,16 @@ const experiences = [
     ],
   },
 ];
-const Skills = () => {
+const Skills = (props) => {
   return (
-    <div id="skills">      
-      <div className="app__skills">
+    <div id="skills">
+      <div className={`app__skills ${props.themeMode}`}>
         <h2 className="head-text color-text">My Skills & Experiences</h2>
         <div className="app__skills-container">
           <div className="app__skills-list">
             {skills.map((skill, index) => (
               <div className="app__skills-item app__flex" key={index}>
-                <div
-                  className="app__flex"
-                  style={{ backgroundColor: skill.bgColor }}
-                >
+                <div className="app__flex">
                   <img src={skill.imgUrl} alt={skill.name} />
                 </div>
                 <p className="p-text">{skill.name}</p>

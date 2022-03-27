@@ -1,7 +1,6 @@
 import React from "react";
 
 import { images } from "../../constants";
-import { GrTools, Hi } from "react-icons/gr";
 import "./About.scss";
 
 const abouts = [
@@ -27,10 +26,10 @@ const abouts = [
   },
 ];
 
-const About = () => {
+const About = (props) => {
   return (
     <div id="about">
-      <div className="app__about">
+      <div className={`app__about ${props.themeMode}`}>
         <h2 className="head-text color-text">
           <p >About Me</p>
         </h2>

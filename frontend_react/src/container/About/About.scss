@@ -4,6 +4,7 @@
   flex: 1;
   flex-direction: row;
   background-color: var(--white-color);
+  transition: all .2s ease-in-out;
 
   h2 {
     margin-bottom: 10px;
@@ -114,5 +115,14 @@
     img {
       height: 350px;
     }
+  }
+}
+
+
+.dark-mode-1 {
+  background-color: var(--darkbg-color-1);
+  
+  p, h2, h3 {
+    color: var(--gray-color);
   }
 }

@@ -37,7 +37,7 @@ const filteredProjects = [
   },
 ];
 
-const Projects = () => {
+const Projects = (props) => {
   const [active, setActive] = useState("All");
 
   const handleProjectsFilter = (item) => {
@@ -46,7 +46,7 @@ const Projects = () => {
 
   return (
     <div id="projects">
-      <div className="app__projects">
+      <div className={`app__projects ${props.themeMode}`}>
         <h2 className="head-text color-text"> My Projects</h2>
 
         <div className="app__projects-filter">

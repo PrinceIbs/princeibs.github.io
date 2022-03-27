@@ -3,10 +3,10 @@ import React from "react";
 import { images } from "../../constants";
 import "./Header.scss";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <div id="home">
-      <div className="app__header app__flex">
+      <div className={`app__header app__flex ${props.themeMode}`}>
         <div className="app__header-info">
           <div className="app__header-badge">
             <div className="badge-card app__flex">

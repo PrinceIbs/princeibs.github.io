@@ -4,17 +4,21 @@
   --font-base: "Lato", sans-serif;
 
   --primary-color: #eeedf8;
-  --secondary-color: #3c1280;
+  --secondary-color: #0f9d58;
   --black-color: #030303;
   --dark-color: #000000;
   --brown-color: #46364a;
-  --gray-color: #8e8c91;
+  --gray-color: #b0aeb3;
   --lightGray-color: #e4e4e4;
   --white-color: #ffffff;
   --green-color: #0f9d58;
   --light-shadow: 0 0 10px rgb(170, 161, 161);
   --medium-shadow: 0 0 15px rgb(170, 161, 161);
   --thick-shadow: 0 0 20px rgb(170, 161, 161);
+  --darkbg-color-1: rgba(9, 7, 14, 0.945);
+  --light-border-color: rgb(82, 80, 80);
+  --vlight-border-color: rgb(46, 45, 45);
+  --darkbg-color-2: rgba(9, 7, 14, 0.980);
 }
 
 * {

@@ -5,7 +5,7 @@
   height: auto;
   flex-direction: column;
   justify-content: center;
-
+  transition: all .2s ease-in-out;
 
   .app__contact-cards {
     display: flex;
@@ -30,7 +30,7 @@
     margin: 1rem 0;
     border-radius: 10px;
     background-color: var(--white-color);
-    transition: all .3s ease-in-out;
+    transition: all .3s ease-out;
 
     img {
       height: 40px;
@@ -71,7 +71,7 @@
       padding:.8rem;
       margin: .5rem;
       border-radius: 50%;
-      transition: all .3s ease-in-out;
+      transition: all .3s ease-out;
       img {
         width: 30px;
         height: 30px;
@@ -113,7 +113,7 @@
     margin: .75rem 0;
     border-radius: 10px;
     background-color: var(--primary-color);
-    transition: all .3s ease-in-out;
+    transition: all .3s ease-out;
 
     input, textarea {
       width: 100%;
@@ -157,5 +157,29 @@
     background-color: var(--secondary-color);
     font-weight: 500;
     font-family: var(--font-base);
+  }
+}
+
+.dark-mode-2 {
+
+  .app__contact-card, .app__contact-icons a {
+    background-color: var(--lightGray-color);    
+    border: solid 2px var(--light-border-color);
+
+    a {
+      color: var(--dark-color);
+    }
+
+    &:hover {
+      box-shadow: 0 0 0;
+      border-color: var(--green-color);
+    }
+  }
+
+  .app__contact-form {
+    input, textarea {
+      background-color: var(--lightGray-color);
+      color: var(--black-color);
+    }
   }
 }

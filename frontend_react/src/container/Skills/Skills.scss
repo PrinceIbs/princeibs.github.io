@@ -6,6 +6,7 @@
   height: 100vh;
   align-items: center;
   justify-content: center;
+  transition: all .2s ease-in-out;
 
   @media screen and (max-width: 1000px) {
     height: auto;
@@ -142,5 +143,27 @@
 
   @media screen and (max-width: 450px) {
     margin-right: 1.5rem;
+  }
+}
+
+.dark-mode-2 {
+  h2,
+  h4,
+  p {
+    color: var(--gray-color);
+  }
+
+  .app__skills-item div {    
+    background-color: var(--dark-mode-2);
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 0 0;
+      border: solid 1px var(--light-border-color);
+    }
+  }
+
+  .app__skills-exp-work p {
+    opacity: 0.8;
   }
 }
