@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import {
   About,
+  Blog,
   Contact,
   Footer,
   Header,
@@ -25,8 +26,9 @@ const App = () => {
       <About themeMode={themeMode === "dark" ? "dark-mode-1" : ""} />
       <Skills themeMode={themeMode === "dark" ? "dark-mode-2" : ""} />
       <Projects themeMode={themeMode === "dark" ? "dark-mode-1" : ""} />
-      <Contact themeMode={themeMode === "dark" ? "dark-mode-2" : ""} />
-      <Footer themeMode={themeMode === "dark" ? "dark-mode-1" : ""} />
+      <Blog themeMode={themeMode === "dark" ? "dark-mode-2" : ""} />
+      <Contact themeMode={themeMode === "dark" ? "dark-mode-1" : ""} />      
+      <Footer themeMode={themeMode === "dark" ? "dark-mode-2" : ""} />
     </div>
   );
 };

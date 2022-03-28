@@ -9,6 +9,7 @@
   height: 100vh;
   padding: 6rem 0 0 4rem;
   position: relative;
+  background-color: #dfdcfc67;
   transition: all 0.2s ease-in-out;
 
   // .bg-img {
@@ -181,14 +182,14 @@
   align-items: flex-end;
 
   div {
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
     border-radius: 50%;
     margin: 0.5rem;
     text-transform: uppercase;
 
-    background-color: rgba(0, 0, 255, 0.885);
-    font-size: 2.5rem;
+    background-color: rgb(10, 8, 165);
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--white-color);
   }
@@ -196,12 +197,6 @@
   @media screen and (max-width: 950px) {
     width: 100%;
     justify-content: space-around;
-
-    div {
-      width: 3rem;
-      height: 3rem;
-      font-size: 2rem;
-    }
   }
 
   @media screen and (max-width: 450px) {
