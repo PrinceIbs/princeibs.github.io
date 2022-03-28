@@ -38,7 +38,7 @@ const Skills = (props) => {
         <div className="app__skills-container">
           <div className="app__skills-list">
             {skills.map((skill, index) => (
-              <div className="app__skills-item app__flex" key={index}>
+              <div className="app__skills-item app__flex" key={`skill-${index}`}>
                 <div className="app__flex">
                   <img src={skill.imgUrl} alt={skill.name} />
                 </div>
@@ -54,9 +54,9 @@ const Skills = (props) => {
                   <p className="bold-text">{experience.year}</p>
                 </div>
                 <div className="app__skills-exp-works">
-                  {experience.works.map((work) => (
+                  {experience.works.map((work, index) => (
                     <>
-                      <div className="app__skills-exp-work">
+                      <div className="app__skills-exp-work" key={`${experience}-${work}-${index}`}>
                         <h4 className="bold-text">{work.name}</h4>
                         <p className="p-text">{work.company}</p>
                       </div>

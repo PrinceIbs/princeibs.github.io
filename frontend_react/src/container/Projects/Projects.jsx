@@ -4,44 +4,63 @@ import { FaEye, FaGithub } from "react-icons/fa";
 import { images } from "../../constants";
 import "./Projects.scss";
 
-const filteredProjects = [
+const projects = [
   {
     title: "Twitter Clone",
     description: "A clone of discord app",
     imgUrl: images.css,
+    tag: "django",
   },
   {
     title: "Discord Clone Clone",
     description: "A clone of Twitter app",
     imgUrl: images.javascript,
+    tag: "django",
   },
   {
     title: "YouTube Clone Clone",
     description: "A clone of YouTube app",
     imgUrl: images.html,
+    tag: "react",
   },
   {
     title: "Twitter Clone",
     description: "A clone of discord app",
     imgUrl: images.css,
+    tag: "django",
   },
   {
     title: "Discord Clone Clone",
     description: "A clone of Twitter app",
     imgUrl: images.javascript,
+    tag: "react",
   },
   {
     title: "YouTube Clone Clone",
     description: "A clone of YouTube app",
     imgUrl: images.html,
+    tag: "solidity",
   },
 ];
 
 const Projects = (props) => {
-  const [active, setActive] = useState("All");
+  const [active, setActive] = useState("all");
+  const [filteredProjects, setFilteredProjects] = useState(projects)
+  let tags = [];
+  projects.forEach(project => tags.push(project.tag))
+
+   tags = [...(new Set(tags)), 'all'];
 
   const handleProjectsFilter = (item) => {
     setActive(item);
+
+    setTimeout(() => {
+      if (item === 'all') {
+        setFilteredProjects(projects)
+      } else {
+        setFilteredProjects(projects.filter(project => project.tag.includes(item)))
+      }
+    }, 200)
   };
 
   return (
@@ -50,7 +69,7 @@ const Projects = (props) => {
         <h2 className="head-text color-text"> My Projects</h2>
 
         <div className="app__projects-filter">
-          {["Django", "React", "All"].map((item, index) => (
+          {tags.map((item, index) => (
             <div
               key={index}
               onClick={() => handleProjectsFilter(item)}

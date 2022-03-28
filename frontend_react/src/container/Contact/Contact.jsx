@@ -95,7 +95,7 @@ const Contact = (props) => {
           </div>
         ) : (
           <div>
-            <h3 className="head-text">Thanks for contacting</h3>
+            <h3 className="head-text">Thanks for connecting</h3>
           </div>
         )}
       </div>

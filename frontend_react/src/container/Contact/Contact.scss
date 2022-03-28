@@ -160,19 +160,28 @@
   }
 }
 
-.dark-mode-2 {
+.dark-mode-1 {
   .app__contact-card, .app__contact-icons a {
-    background-color: var(--lightGray-color);    
+    background-color: var(--vlight-border-color);    
     border: solid 2px var(--light-border-color);
 
+    img {
+      background-color: white;
+      border-radius: 15%;
+    }
+
     a {
-      color: var(--dark-color);
+      color: var(--lightGray-color);
     }
 
     &:hover {
       box-shadow: 0 0 0;
       border-color: var(--green-color);
     }
+  }
+
+  .app__contact-card img {
+    background-color: var(--vlight-border-color);
   }
 
   h3 {
@@ -183,6 +192,10 @@
     input, textarea {
       background-color: var(--lightGray-color);
       color: var(--black-color);
-    }
+
+      &:hover {
+        box-shadow: 0 0 0;
+      }
+    }    
   }
 }

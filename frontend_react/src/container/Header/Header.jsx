@@ -1,6 +1,5 @@
 import React from "react";
 
-import { images } from "../../constants";
 import "./Header.scss";
 
 const Header = (props) => {
@@ -13,7 +12,7 @@ const Header = (props) => {
               meet <br />
               <span>Suleiman Ibrahim</span>
             </h1>
-            <h2>a software engineer</h2>
+            <h2><span>software developer</span></h2>
             <p>
               this is a simple dummy text that will be replaced later with
               something meaningful. It's purpose and life is to occupy this
