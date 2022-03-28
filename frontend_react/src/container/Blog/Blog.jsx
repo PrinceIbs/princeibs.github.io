@@ -34,7 +34,11 @@ const blog = [
 
 const Blog = (props) => {
   return (
-    <div id="blog" className={`app__blog ${props.themeMode}`}>
+    <div
+      id="blog"
+      className={`app__blog ${props.themeMode}`}
+      onClick={() => props.setIsNavOpen(false)}
+    >
       <h2 className="head-text">my recent blogs</h2>
 
       <div className="app__blog-items">
@@ -43,8 +47,10 @@ const Blog = (props) => {
             <div className="img">
               <img src={item.imgUrl} alt={item.title} />
             </div>
-            <a href={item.url}><FiExternalLink /></a>
-            <div className="title bold-text">{item.title}</div>            
+            <a href={item.url}>
+              <FiExternalLink />
+            </a>
+            <div className="title bold-text">{item.title}</div>
           </div>
         ))}
       </div>

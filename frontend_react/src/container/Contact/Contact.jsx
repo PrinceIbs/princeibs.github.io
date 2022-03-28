@@ -31,7 +31,7 @@ const Contact = (props) => {
   };
 
   return (
-    <div id="contact">
+    <div id="contact" onClick={() => props.setIsNavOpen(false)}>
       <div className={`app__contact ${props.themeMode}`}>
         <h2 className="head-text color-text">Connect with me</h2>
 

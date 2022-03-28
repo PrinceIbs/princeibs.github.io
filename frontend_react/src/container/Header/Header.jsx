@@ -5,7 +5,7 @@ import "./Header.scss";
 
 const Header = (props) => {
   return (
-    <div id="home">
+    <div id="home" onClick={() => props.setIsNavOpen(false)}>
       <div className={`app__header ${props.themeMode}`}>
         <div className="app__header-info">
           <div className="app__header-info-content">

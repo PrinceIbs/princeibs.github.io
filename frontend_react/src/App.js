@@ -15,20 +15,45 @@ import "./App.scss";
 
 const App = () => {
   const [themeMode, setThemeMode] = useState(localStorage.getItem("themeMode"));
+  const [isNavOpen, setIsNavOpen] = React.useState(false);
+
   return (
     <div className="app">
       <Navbar
         themeMode={themeMode === "dark" ? "dark-mode-1" : ""}
         setThemeMode={setThemeMode}
         theme={themeMode}
+        isNavOpen={isNavOpen}
+        setIsNavOpen={setIsNavOpen}
       />
-      <Header themeMode={themeMode === "dark" ? "dark-mode-2" : ""} />
-      <About themeMode={themeMode === "dark" ? "dark-mode-1" : ""} />
-      <Skills themeMode={themeMode === "dark" ? "dark-mode-2" : ""} />
-      <Projects themeMode={themeMode === "dark" ? "dark-mode-1" : ""} />
-      <Blog themeMode={themeMode === "dark" ? "dark-mode-2" : ""} />
-      <Contact themeMode={themeMode === "dark" ? "dark-mode-1" : ""} />      
-      <Footer themeMode={themeMode === "dark" ? "dark-mode-2" : ""} />
+      <Header
+        themeMode={themeMode === "dark" ? "dark-mode-2" : ""}
+        setIsNavOpen={setIsNavOpen}
+      />
+      <About
+        themeMode={themeMode === "dark" ? "dark-mode-1" : ""}
+        setIsNavOpen={setIsNavOpen}
+      />
+      <Skills
+        themeMode={themeMode === "dark" ? "dark-mode-2" : ""}
+        setIsNavOpen={setIsNavOpen}
+      />
+      <Projects
+        themeMode={themeMode === "dark" ? "dark-mode-1" : ""}
+        setIsNavOpen={setIsNavOpen}
+      />
+      <Blog
+        themeMode={themeMode === "dark" ? "dark-mode-2" : ""}
+        setIsNavOpen={setIsNavOpen}
+      />
+      <Contact
+        themeMode={themeMode === "dark" ? "dark-mode-1" : ""}
+        setIsNavOpen={setIsNavOpen}
+      />
+      <Footer
+        themeMode={themeMode === "dark" ? "dark-mode-2" : ""}
+        setIsNavOpen={setIsNavOpen}
+      />
     </div>
   );
 };

@@ -32,7 +32,7 @@ const experiences = [
 ];
 const Skills = (props) => {
   return (
-    <div id="skills">
+    <div id="skills" onClick={() => props.setIsNavOpen(false)}>
       <div className={`app__skills ${props.themeMode}`}>
         <h2 className="head-text color-text">My Skills & Experiences</h2>
         <div className="app__skills-container">

@@ -28,10 +28,10 @@ const abouts = [
 
 const About = (props) => {
   return (
-    <div id="about">
+    <div id="about" onClick={() => props.setIsNavOpen(false)}>
       <div className={`app__about ${props.themeMode}`}>
         <h2 className="head-text color-text">
-          <p >About Me</p>
+          <p>About Me</p>
         </h2>
 
         <div className="app__about-body">
@@ -45,10 +45,9 @@ const About = (props) => {
                 I wish to say good things right now at this section, but since
                 this is still a development environment, let's use this to hold
                 the containers first.
-                <br/> <br/>                
-                I wish to say good things right now at this section, but since
-                this is still a development environment, let's use this to hold
-                the containers first.
+                <br /> <br />I wish to say good things right now at this
+                section, but since this is still a development environment,
+                let's use this to hold the containers first.
               </p>
             </div>
             <div>

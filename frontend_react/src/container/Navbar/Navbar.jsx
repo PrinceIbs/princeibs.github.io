@@ -3,7 +3,6 @@ import { HiMenu, HiOutlineMoon, HiOutlineSun, HiX } from "react-icons/hi";
 
 import "./Navbar.scss";
 const Navbar = (props) => {
-  const [isNavOpen, setIsNavOpen] = React.useState(false);
   useEffect(() => {
     localStorage.getItem("themeMode");
   }, []);
@@ -54,14 +53,14 @@ const Navbar = (props) => {
         </div>
 
         <div className="app__navbar-menu">
-          <HiMenu onClick={() => setIsNavOpen(true)} />
-          {isNavOpen && (
+          <HiMenu onClick={() => props.setIsNavOpen(true)} />
+          {props.isNavOpen && (
             <div>
-              <HiX onClick={() => setIsNavOpen(false)} />
+              <HiX onClick={() => props.setIsNavOpen(false)} />
               <ul>
                 {["about", "skills", "projects", "blog", "contact"].map(
                   (link) => (
-                    <li key={link} onClick={() => setIsNavOpen(false)}>
+                    <li key={link} onClick={() => props.setIsNavOpen(false)}>
                       <a href={`#${link}`}>{link}</a>
                     </li>
                   )

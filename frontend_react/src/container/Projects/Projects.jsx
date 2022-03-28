@@ -45,7 +45,7 @@ const Projects = (props) => {
   };
 
   return (
-    <div id="projects">
+    <div id="projects" onClick={() => props.setIsNavOpen(false)}>
       <div className={`app__projects ${props.themeMode}`}>
         <h2 className="head-text color-text"> My Projects</h2>
 
