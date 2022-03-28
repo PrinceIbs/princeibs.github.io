@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { HiMenu, HiOutlineMoon, HiOutlineSun, HiX } from "react-icons/hi";
 
 import "./Navbar.scss";
-
 const Navbar = (props) => {
   const [isNavOpen, setIsNavOpen] = React.useState(false);
+  useEffect(() => {
+    localStorage.getItem("themeMode");
+  }, []);
+  const handleToggleTheme = (mode) => {
+    props.setThemeMode(mode);
+    localStorage.setItem("themeMode", mode);
+  };
   return (
     <nav className={`app__navbar ${props.themeMode}`}>
       <a href="#home">
@@ -31,7 +37,7 @@ const Navbar = (props) => {
           {props.theme === "light" && (
             <div
               className="app_navbar-toggle-off"
-              onClick={() => props.setThemeMode("dark")}
+              onClick={() => handleToggleTheme("dark")}
             >
               <HiOutlineMoon />
             </div>
@@ -40,7 +46,7 @@ const Navbar = (props) => {
           {props.theme === "dark" && (
             <div
               className="app_navbar-toggle-on"
-              onClick={() => props.setThemeMode("light")}
+              onClick={() => handleToggleTheme("light")}
             >
               <HiOutlineSun />
             </div>
