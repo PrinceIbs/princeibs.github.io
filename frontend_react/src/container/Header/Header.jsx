@@ -27,10 +27,18 @@ const Header = (props) => {
             </div>
           </div>
           <div className="app__header-info-misc">
-            <div className="app__flex">h</div>
-            <div className="app__flex">a</div>
-            <div className="app__flex">c</div>
-            <div className="app__flex">k</div>
+            <div className="tags app__flex">
+              <div>help others</div>
+              <div>add value</div>
+              <div>connect</div>
+              <div>keep growing</div>
+            </div>
+            <div className="circles">
+              <div className="app__flex">h</div>
+              <div className="app__flex">a</div>
+              <div className="app__flex">c</div>
+              <div className="app__flex">k</div>
+            </div>
           </div>
         </div>
         {/* <div className="bg-img">

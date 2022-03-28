@@ -59,7 +59,6 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    
 
     h1 {
       font-size: 2.8rem;
@@ -73,7 +72,7 @@
         padding: 0 6px;
         box-shadow: var(--light-shadow);
         font-weight: 800;
-        transition: all .2s ease-in-out;
+        transition: all 0.2s ease-in-out;
       }
     }
 
@@ -179,19 +178,70 @@
   height: 30%;
   width: auto;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
 
-  div {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    margin: 0.5rem;
-    text-transform: uppercase;
+  .tags {
+    position: relative;
+    width: 110px;
+    height: 30px;
 
-    background-color: rgb(10, 8, 165);
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--white-color);
+    div {
+      position: absolute;
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: capitalize;
+    }
+
+    div:nth-child(1n + 1) {
+      animation: blink1 5s infinite;
+    }
+
+    div:nth-child(1n + 2) {
+      animation: blink2 5s infinite;
+    }
+
+    div:nth-child(1n + 3) {
+      animation: blink3 5s infinite;
+    }
+
+    div:nth-child(1n + 4) {
+      animation: blink4 5s infinite;
+    }
+  }
+
+  .circles {
+    display: flex;
+
+    div {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      margin: 0.5rem;
+      text-transform: uppercase;
+
+      background-color: rgb(10, 8, 165);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--white-color);
+    }
+
+    div:nth-child(1n + 1) {
+      animation: blink1 5s infinite;
+    }
+
+    div:nth-child(1n + 2) {
+      animation: blink2 5s infinite;
+    }
+
+    div:nth-child(1n + 3) {
+      animation: blink3 5s infinite;
+    }
+
+    div:nth-child(1n + 4) {
+      animation: blink4 5s infinite;
+    }
   }
 
   @media screen and (max-width: 950px) {
@@ -218,9 +268,85 @@
     padding: 5px;
   }
 
-  .app__header-info-misc div {
-    background-color: rgba(0, 0, 255, 0.563);
-    color: var(--lightGray-color);
+  .app__header-info-misc {
+    .tags div {
+      color: var(--lightGray-color);
+    }
+    .circles div {
+      background-color: rgba(0, 0, 255, 0.563);
+      color: var(--lightGray-color);
+    }
   }
 }
 
+@keyframes blink1 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink2 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink3 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink4 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

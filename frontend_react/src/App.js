@@ -14,7 +14,7 @@ import {
 import "./App.scss";
 
 const App = () => {
-  const [themeMode, setThemeMode] = useState("dark");
+  const [themeMode, setThemeMode] = useState("light");
   return (
     <div className="app">
       <Navbar
