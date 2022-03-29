@@ -8,13 +8,14 @@ import {
   Header,
   Navbar,
   Skills,
-  Testimonial,
   Projects,
 } from "./container";
 import "./App.scss";
 
 const App = () => {
-  const [themeMode, setThemeMode] = useState(localStorage.getItem("themeMode"));
+  let getThemeMode = localStorage.getItem("themeMode") ? localStorage.getItem("themeMode") : "dark";
+  const [themeMode, setThemeMode] = useState(getThemeMode);
+  console.log("themeM: " + themeMode)
   const [isNavOpen, setIsNavOpen] = React.useState(false);
 
   return (

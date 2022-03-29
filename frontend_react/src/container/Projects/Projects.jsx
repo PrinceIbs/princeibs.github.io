@@ -1,55 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaEye, FaGithub } from "react-icons/fa";
 
-import { images } from "../../constants";
+import {urlFor, client} from "../../client"
 import "./Projects.scss";
 
-const projects = [
-  {
-    title: "Twitter Clone",
-    description: "A clone of discord app",
-    imgUrl: images.css,
-    tag: "django",
-  },
-  {
-    title: "Discord Clone Clone",
-    description: "A clone of Twitter app",
-    imgUrl: images.javascript,
-    tag: "django",
-  },
-  {
-    title: "YouTube Clone Clone",
-    description: "A clone of YouTube app",
-    imgUrl: images.html,
-    tag: "react",
-  },
-  {
-    title: "Twitter Clone",
-    description: "A clone of discord app",
-    imgUrl: images.css,
-    tag: "django",
-  },
-  {
-    title: "Discord Clone Clone",
-    description: "A clone of Twitter app",
-    imgUrl: images.javascript,
-    tag: "react",
-  },
-  {
-    title: "YouTube Clone Clone",
-    description: "A clone of YouTube app",
-    imgUrl: images.html,
-    tag: "solidity",
-  },
-];
 
 const Projects = (props) => {
   const [active, setActive] = useState("all");
-  const [filteredProjects, setFilteredProjects] = useState(projects)
+  const [projects, setProjects] = useState([]);
+  const [filteredProjects, setFilteredProjects] = useState([])
   let tags = [];
   projects.forEach(project => tags.push(project.tag))
 
    tags = [...(new Set(tags)), 'all'];
+
+   useEffect(() => {
+     const query = '*[_type == "projects"]';
+
+     client.fetch(query).then((data) => {
+       setProjects(data);
+       setFilteredProjects(data)
+     })
+   }, [])
+   
 
   const handleProjectsFilter = (item) => {
     setActive(item);
@@ -86,7 +59,7 @@ const Projects = (props) => {
           {filteredProjects.map((project, index) => (
             <div className="app__projects-item app__flex" key={index}>
               <div className="app__projects-img app__flex">
-                <img src={project.imgUrl} alt={project.title} />
+                <img src={urlFor(project.imgUrl)} alt={project.title} />
                 <div className="app__projects-hover app__flex">
                   <a
                     href={project.projectLink}

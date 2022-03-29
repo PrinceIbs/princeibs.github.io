@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+import { client} from "../../client";
 import { images } from "../../constants";
 import "./Contact.scss";
 
@@ -24,10 +25,21 @@ const Contact = (props) => {
 
   const handleSubmit = () => {
     setIsLoading(true);
-    // send data through api
-    console.log(formData);
-    setIsLoading(false);
-    setIsFormSubmitted(true);
+
+    const contact = {
+      _type: "contact",
+      name: formData.name,
+      email: formData.email,
+      message: formData.message,
+    };
+
+    client
+      .create(contact)
+      .then(() => {
+        setIsLoading(false);
+        setIsFormSubmitted(true);
+      })
+      .catch((err) => console.log(err));
   };
 
   return (

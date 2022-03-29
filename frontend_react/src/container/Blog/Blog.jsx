@@ -1,38 +1,19 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { FiExternalLink } from "react-icons/fi";
 
-import { images } from "../../constants";
+import { urlFor, client } from "../../client";
 import "./Blog.scss";
 
-const blog = [
-  {
-    title: "Working with GridBag layout in Java",
-    url: "https://google.com",
-    imgUrl: images.javascript,
-  },
-  {
-    title: "Learning roadmap for backend engineers",
-    url: "https://google.com",
-    imgUrl: images.cover,
-  },
-  {
-    title: "How to get started as a DevOps Engineer",
-    url: "https://google.com",
-    imgUrl: images.javascript,
-  },
-  {
-    title: "Learning roadmap for backend engineers",
-    url: "https://google.com",
-    imgUrl: images.cover,
-  },
-  {
-    title: "How to get started as a DevOps Engineer",
-    url: "https://google.com",
-    imgUrl: images.javascript,
-  },
-];
-
 const Blog = (props) => {
+  const [blog, setBlog] = useState([])
+  useEffect(() => {
+    const query = '*[_type == "blog"]';
+
+    client.fetch(query).then((data) => {
+      setBlog(data);
+    });
+  }, []);
+  
   return (
     <div
       id="blog"
@@ -45,9 +26,9 @@ const Blog = (props) => {
         {blog.map((item, index) => (
           <div className="app__blog-item" key={index}>
             <div className="img">
-              <img src={item.imgUrl} alt={item.title} />
+              <img src={urlFor(item.imgUrl)} alt={item.title} />
             </div>
-            <a href={item.url}>
+            <a href={item.link}>
               <FiExternalLink />
             </a>
             <div className="title bold-text">{item.title}</div>
