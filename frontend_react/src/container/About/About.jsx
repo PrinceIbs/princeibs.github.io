@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 
-import {client, urlFor} from "../..//client"
+import { client, urlFor } from "../..//client";
 import { images } from "../../constants";
 import "./About.scss";
 
@@ -22,18 +22,19 @@ const About = (props) => {
 
         <div className="app__about-body">
           <div className="app__about-img">
-            <img src={images.html} alt="about-img"/>
+            <img src={images.html} alt="about-img" />
           </div>
 
           <div className="app__about-content">
             <div className="app__about-txt">
               <p className="bold-text">
-                I wish to say good things right now at this section, but since
-                this is still a development environment, let's use this to hold
-                the containers first.
-                <br /> <br />I wish to say good things right now at this
-                section, but since this is still a development environment,
-                let's use this to hold the containers first.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque
+                fugit assumenda illum eveniet ratione non expedita accusamus
+                numquam animi sapiente!
+                <br /> <br />
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab
+                accusamus pariatur molestiae laboriosam necessitatibus quo amet
+                eius non sapiente labore.
               </p>
             </div>
             <div>

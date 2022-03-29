@@ -12,11 +12,14 @@ const Header = (props) => {
               meet <br />
               <span>Suleiman Ibrahim</span>
             </h1>
-            <h2><span>software developer</span></h2>
+            <h2>
+              <span>software developer</span>
+            </h2>
             <p>
-              this is a simple dummy text that will be replaced later with
-              something meaningful. It's purpose and life is to occupy this
-              container and space while the original text arrives
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad
+              magnam, voluptatem quae laboriosam tempore sapiente ipsa esse
+              natus nostrum dicta cumque! Dolores neque sed minima praesentium
+              ad autem commodi et.
             </p>
             <div className="app__header-info-buttons">
               <a href="#contact" style={{ textDecoration: "none" }}>
