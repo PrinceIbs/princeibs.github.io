@@ -2,10 +2,11 @@
   flex: 1;
   display: flex;
   width: 100%;
-  height: auto;
+  min-height: 100vh;
   flex-direction: column;
   justify-content: center;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  padding-bottom: 4rem;
 
   .app__contact-cards {
     display: flex;
@@ -15,7 +16,6 @@
     width: 100%;
     flex-wrap: wrap-reverse;
     margin: 4rem 0;
-    
   }
 
   .app__contact-card {
@@ -30,12 +30,12 @@
     margin: 1rem 0;
     border-radius: 10px;
     background-color: var(--white-color);
-    transition: all .3s ease-out;
+    transition: all 0.3s ease-out;
 
     img {
       height: 40px;
       width: 40px;
-      margin: 0 .7rem;
+      margin: 0 0.7rem;
     }
 
     a {
@@ -52,8 +52,11 @@
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      margin: .5rem  0;
-      
+      margin: 0.5rem 0;
+    }
+
+    @media screen and (max-width: 390px) {
+      padding: 0.5rem 0;
     }
   }
 
@@ -67,11 +70,10 @@
     border-radius: 10px;
 
     a {
-      background-color: var(--white-color);
-      padding:.8rem;
-      margin: .5rem;
+      padding: 0.7rem;
+      margin: 0.3rem;
       border-radius: 50%;
-      transition: all .3s ease-out;
+      transition: all 0.3s ease-out;
       img {
         width: 30px;
         height: 30px;
@@ -84,7 +86,7 @@
       }
 
       @media screen and (max-width: 350px) {
-        margin: .2rem;
+        margin: 0.2rem;
       }
     }
   }
@@ -109,15 +111,16 @@
 
   div {
     cursor: pointer;
-    width: 50%;
-    margin: .75rem 0;
+    width: 40%;
+    margin: 0.75rem 0;
     border-radius: 10px;
     background-color: var(--primary-color);
-    transition: all .3s ease-out;
+    transition: all 0.3s ease-out;
 
-    input, textarea {
+    input,
+    textarea {
       width: 100%;
-      padding: .95rem;
+      padding: 0.95rem;
       border: none;
       outline: none;
       border-radius: 7px;
@@ -125,8 +128,7 @@
       color: var(--black-color);
       background-color: var(--white-color);
       font-weight: 800;
-
-     
+      font-size: 1.1rem;
     }
 
     textarea {
@@ -148,7 +150,7 @@
 
   button {
     cursor: pointer;
-    margin: 2rem 0 0 0 ;
+    margin: 2rem 0 0 0;
     padding: 1rem 2rem;
     border: none;
     outline: none;
@@ -157,12 +159,17 @@
     background-color: var(--secondary-color);
     font-weight: 500;
     font-family: var(--font-base);
+
+    &:disabled {
+      background-color: var(--gray-color);
+    }
   }
 }
 
 .dark-mode-1 {
-  .app__contact-card, .app__contact-icons a {
-    background-color: var(--vlight-border-color);    
+  .app__contact-card,
+  .app__contact-icons a {
+    background-color: var(--vlight-border-color);
     border: solid 2px var(--light-border-color);
 
     img {
@@ -173,10 +180,14 @@
     a {
       color: var(--lightGray-color);
     }
+  }
+
+  .app__contact-icons a {
+    background-color: inherit;
+    border: none;
 
     &:hover {
-      box-shadow: 0 0 0;
-      border-color: var(--green-color);
+      box-shadow: var(--light-shadow);
     }
   }
 
@@ -189,13 +200,14 @@
   }
 
   .app__contact-form {
-    input, textarea {
+    input,
+    textarea {
       background-color: var(--lightGray-color);
       color: var(--black-color);
 
       &:hover {
         box-shadow: 0 0 0;
       }
-    }    
+    }
   }
 }

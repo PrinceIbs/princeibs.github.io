@@ -1,8 +1,16 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 
+import {client} from "../../client"
 import "./Header.scss";
 
 const Header = (props) => {
+  const [content, setContent] = useState([]);
+
+  useEffect(() => {
+    const cQuery = '*[_type == "content"]';
+
+    client.fetch(cQuery).then((data) => setContent(data[0]));
+  }, []);
   return (
     <div id="home" onClick={() => props.setIsNavOpen(false)}>
       <div className={`app__header ${props.themeMode}`}>
@@ -15,12 +23,7 @@ const Header = (props) => {
             <h2>
               <span>software developer</span>
             </h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad
-              magnam, voluptatem quae laboriosam tempore sapiente ipsa esse
-              natus nostrum dicta cumque! Dolores neque sed minima praesentium
-              ad autem commodi et.
-            </p>
+            <p>{content.headerText}</p>
             <div className="app__header-info-buttons">
               <a href="#contact" style={{ textDecoration: "none" }}>
                 <div className="contact-btn app__flex">contact me</div>

@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from "react";
 
-import { client, urlFor } from "../..//client";
+import { client, urlFor } from "../../client";
 import { images } from "../../constants";
 import "./About.scss";
 
 const About = (props) => {
   const [abouts, setAbouts] = useState([]);
+  const [content, setContent] = useState([])
 
   useEffect(() => {
     const query = '*[_type == "abouts"]';
+    const cQuery = '*[_type == "content"]';
 
     client.fetch(query).then((data) => setAbouts(data));
+    client.fetch(cQuery).then(data => setContent(data[0]));
   }, []);
 
   return (
@@ -22,19 +25,15 @@ const About = (props) => {
 
         <div className="app__about-body">
           <div className="app__about-img">
-            <img src={images.html} alt="about-img" />
+            <img src={images.aboutImg} alt="about-img" />
           </div>
 
           <div className="app__about-content">
             <div className="app__about-txt">
-              <p className="bold-text">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque
-                fugit assumenda illum eveniet ratione non expedita accusamus
-                numquam animi sapiente!
+              <p className="">
+                {content.aboutText1}
                 <br /> <br />
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab
-                accusamus pariatur molestiae laboriosam necessitatibus quo amet
-                eius non sapiente labore.
+                {content.aboutText2}
               </p>
             </div>
             <div>

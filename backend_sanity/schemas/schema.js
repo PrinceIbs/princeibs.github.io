@@ -6,6 +6,7 @@ import schemaTypes from "all:part:@sanity/base/schema-type";
 import abouts from "./abouts";
 import blog from "./blog";
 import contact from "./contact";
+import content from "./content";
 import experienceDetails from "./experienceDetails";
 import experiences from "./experiences";
 import projects from "./projects";
@@ -22,6 +23,7 @@ export default createSchema({
     abouts,
     blog,
     contact,
+    content,
     experienceDetails,
     experiences,
     projects,

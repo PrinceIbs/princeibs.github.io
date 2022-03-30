@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import appContent from "./content/appContent";
 
 import {
   About,
@@ -15,7 +16,6 @@ import "./App.scss";
 const App = () => {
   let getThemeMode = localStorage.getItem("themeMode") ? localStorage.getItem("themeMode") : "dark";
   const [themeMode, setThemeMode] = useState(getThemeMode);
-  console.log("themeM: " + themeMode)
   const [isNavOpen, setIsNavOpen] = React.useState(false);
 
   return (

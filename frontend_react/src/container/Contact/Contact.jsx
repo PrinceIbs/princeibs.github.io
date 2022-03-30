@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 
-import { client} from "../../client";
+import { client } from "../../client";
 import { images } from "../../constants";
+import appContent from "../../content/appContent";
 import "./Contact.scss";
 
 const Contact = (props) => {
+  const content = appContent.contactContent;
+  const smLinks = [Object.values(content.sm)][0];
+  const smLiinksImg = [Object.keys(content.sm)][0];
+
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
@@ -14,6 +19,8 @@ const Contact = (props) => {
   });
 
   const { name, email, message } = formData;
+  const btnActive =
+    formData.name && formData.email && formData.message ? false : true;
 
   const handleChangeInput = (e) => {
     const { name, value } = e.target;
@@ -50,23 +57,19 @@ const Contact = (props) => {
         <div className="app__contact-cards">
           <div className="app__contact-card">
             <img src={images.email} alt="email" />
-            <a href="mailto:hello@princeibs.com" className="p-text">
-              hello@princeibs.com
+            <a
+              href={`mailto:${appContent.contactContent.email}`}
+              className="p-text"
+            >
+              {content.email}
             </a>
           </div>
           <div className="app__contact-icons">
-            <a href="https://twitter.com/prince_ibs">
-              <img src={images.twitter} alt="https://twitter.com/prince_ibs" />
-            </a>
-            <a href="https://linkedin.com/in/princeibs">
-              <img
-                src={images.linkedin}
-                alt="https://linkedin.com/in/princeibs"
-              />
-            </a>
-            <a href="https://github.com/princeibs">
-              <img src={images.github} alt="https://github.com/princeibs" />
-            </a>
+            {smLinks.map((link, index) => (
+              <a href={link}>
+                <img src={`${images[smLiinksImg[index]]}`} alt={link} />
+              </a>
+            ))}
           </div>
         </div>
 
@@ -101,7 +104,12 @@ const Contact = (props) => {
                 onChange={handleChangeInput}
               />
             </div>
-            <button type="button" className="p-text" onClick={handleSubmit}>
+            <button
+              disabled={btnActive}
+              type="button"
+              className="p-text"
+              onClick={handleSubmit}
+            >
               {!isLoading ? "Send Message" : "Sending..."}
             </button>
           </div>

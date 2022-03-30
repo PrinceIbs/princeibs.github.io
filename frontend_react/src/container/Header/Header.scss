@@ -177,7 +177,17 @@
   }
 
   .download-btn {
-    background-color: rgb(2, 1, 107);
+    // background-color: rgb(2, 1, 107);
+
+    // Remove all rules below and uncomment the rule above 
+    // when resume is ready to be downloaded
+    background-color: var(--gray-color);
+
+    &:is(:hover, :focus) {
+      box-shadow: 0 0 0;
+      transform: translateY(0);
+      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.6);
+    }
   }
 }
 
@@ -273,10 +283,6 @@
     color: var(--gray-color);
     box-shadow: 0 0 0;
     padding: .2rem 1rem;
-  }
-
-  .app__header-info-content h1 span {
-    padding: 5px;
   }
 
   .app__header-info-misc {

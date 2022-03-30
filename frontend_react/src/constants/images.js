@@ -1,22 +1,21 @@
-import cover from "../assets/cover.jpg"
-import email from "../assets/email.png"
+import aboutImg from "../assets/aboutImg.png";
+import devto from "../assets/devto.png";
+import email from "../assets/email.png";
 import css from "../assets/css.png";
 import flutter from "../assets/flutter.png";
 import git from "../assets/git.png";
-import github from "../assets/github.png"
+import github from "../assets/github.png";
 import html from "../assets/html.png";
-import linkedin from "../assets/linkedin.png"
-import logo from "../assets/ibs_logo.jpg"
+import linkedin from "../assets/linkedin.png";
 import javascript from "../assets/javascript.png";
-// import profile from "../assets/profile.jpg";
 import python from "../assets/python.png";
 import react from "../assets/react.png";
 import sass from "../assets/sass.png";
 import twitter from "../assets/twitter.png";
 
-
 export default {
-  cover,
+  aboutImg,
+  devto,
   email,
   css,
   flutter,
@@ -24,9 +23,7 @@ export default {
   github,
   html,
   linkedin,
-  logo,
   javascript,
-  // profile,
   python,
   react,
   sass,
