@@ -1,11 +1,13 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
+import { AiOutlineInfoCircle } from "react-icons/ai";
 
-import {client, urlFor} from "../../client"
+import { client, urlFor } from "../../client";
 import "./Skills.scss";
 
 const Skills = (props) => {
   const [experiences, setExperiences] = useState([]);
   const [skills, setSkills] = useState([]);
+  const [active, setActive] = useState();
 
   useEffect(() => {
     const expQuery = '*[_type == "experiences"]';
@@ -19,6 +21,7 @@ const Skills = (props) => {
       setSkills(data);
     });
   }, []);
+
   return (
     <div id="skills" onClick={() => props.setIsNavOpen(false)}>
       <div className={`app__skills ${props.themeMode}`}>
@@ -51,8 +54,20 @@ const Skills = (props) => {
                         className="app__skills-exp-work"
                         key={`${experience}-${work}-${index}`}
                       >
-                        <h4 className="bold-text">{work.name}</h4>
+                        <div className="work-name">
+                          <h4 className="bold-text">{work.name}</h4>
+                          <span>
+                            <AiOutlineInfoCircle
+                              onClick={() =>
+                                setActive(active === work.name ? "" : work.name)
+                              }
+                            />
+                          </span>
+                        </div>
                         <p className="p-text">{work.company}</p>
+                        {work.name === active && (
+                          <div className="work-desc">{work.desc}</div>
+                        )}
                       </div>
                     </>
                   ))}

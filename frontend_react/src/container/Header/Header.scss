@@ -20,6 +20,7 @@
     height: 750px;
     border-radius: 50%;
     background-color: white;
+    box-shadow: var(--light-shadow);
 
     img {
       position: relative;
@@ -139,7 +140,7 @@
       font-size: 0.8rem;
       font-weight: 600;
       text-transform: uppercase;
-      width: 50%;
+      width: 40%;
       letter-spacing: 0.1rem;
       word-spacing: 0.3rem;
     }

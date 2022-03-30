@@ -6,7 +6,7 @@
   min-height: 100vh;
   align-items: center;
   justify-content: center;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 
   @media screen and (max-width: 1000px) {
     height: auto;
@@ -113,21 +113,38 @@
   flex: 1;
 
   .app__skills-exp-work {
-    cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     margin-bottom: 1rem;
-    width: auto;
+    width: 60%;
+    
+
+    .work-desc {
+      background-color: var(--white-color);
+      margin-bottom: .5rem;
+      margin-top: .2rem;
+      padding: 5px;
+      border-radius: 5px;
+      font-weight: 700;
+      font-size: .9rem;
+      transition: all .3 ease-in-out;
+    }
   }
 
-  h4 {
+  .work-name {
     font-weight: 700;
+    display: flex;
+
+    span {
+      margin: 0 5px;
+      font-size: 20px;
+      cursor: pointer;
+    }
   }
 
   p {
-    margin-top: 0.3rem;
     font-weight: 600;
     color: var(--secondary-color);
   }
@@ -153,9 +170,9 @@
     color: var(--gray-color);
   }
 
-  .app__skills-item div {    
+  .app__skills-item div {
     background-color: var(--dark-mode-2);
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 
     &:hover {
       box-shadow: 0 0 0;
@@ -165,5 +182,9 @@
 
   .app__skills-exp-work p {
     opacity: 0.8;
+  }
+
+  div.work-name span {
+    color: white;
   }
 }

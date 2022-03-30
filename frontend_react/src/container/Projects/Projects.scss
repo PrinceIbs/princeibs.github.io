@@ -52,7 +52,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
 
   .app__projects-item {
     width: 350px;
@@ -144,6 +144,11 @@
     @media screen and (min-width: 2000px) {
       margin-top: 3rem;
     }
+  }
+
+  p {
+    text-align: center;
+    font-size: 1.1rem;
   }
 }
 
