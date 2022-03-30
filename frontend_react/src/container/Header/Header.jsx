@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 
 import {client} from "../../client"
 import "./Header.scss";
+import {images} from "../../constants"
 
 const Header = (props) => {
   const [content, setContent] = useState([]);
@@ -23,6 +24,7 @@ const Header = (props) => {
             <h2>
               <span>software developer</span>
             </h2>
+            <div className="bg-img"><img src={images.devto} /></div>
             <p>{content.headerText}</p>
             <div className="app__header-info-buttons">
               <a href="#contact" style={{ textDecoration: "none" }}>
@@ -44,7 +46,7 @@ const Header = (props) => {
               <div className="app__flex">c</div>
               <div className="app__flex">k</div>
             </div>
-          </div>
+          </div>          
         </div>
         {/* <div className="bg-img">
           <img src={images.cover} />
