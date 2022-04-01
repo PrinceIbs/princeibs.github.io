@@ -5,6 +5,7 @@ import css from "../assets/css.png";
 import flutter from "../assets/flutter.png";
 import git from "../assets/git.png";
 import github from "../assets/github.png";
+import headshot from "../assets/headshot.jpg"
 import html from "../assets/html.png";
 import linkedin from "../assets/linkedin.png";
 import javascript from "../assets/javascript.png";
@@ -21,6 +22,7 @@ export default {
   flutter,
   git,
   github,
+  headshot,
   html,
   linkedin,
   javascript,

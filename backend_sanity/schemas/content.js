@@ -9,10 +9,16 @@ export default {
       type: "text",
     },
     {
+      name: "resumeDownloadLink",
+      title: "Resume Download Link",
+      type: "string",
+    },
+    {
       name: "aboutImg",
       title: "About Image",
       type: "image",
     },
+    
     {
       name: "aboutText1",
       title: "About Text 1",
