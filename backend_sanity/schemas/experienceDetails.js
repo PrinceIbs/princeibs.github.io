@@ -14,7 +14,7 @@ export default {
     {
       name: "desc",
       title: "Description",
-      type: "string",
+      type: "text",
     },
   ],
 };
